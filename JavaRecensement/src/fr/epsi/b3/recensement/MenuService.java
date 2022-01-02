@@ -1,9 +1,10 @@
 package fr.epsi.b3.recensement;
 
+import fr.epsi.b3.recensement.service.*;
+
 import java.util.Scanner;
 
 public abstract class MenuService {
-
     public static void traiter(Recensement recensement, Scanner scanner) {
         System.out.println("1 : Population d’une ville donnée");
         System.out.println("2 : Population d’un département donné");
@@ -17,6 +18,40 @@ public abstract class MenuService {
         System.out.println("Veulliez choisir une action à exécuter : ");
         int nb = scanner.nextInt();
 
-
+        switch (nb) {
+            case 1 -> {
+                RecherchePopulationVille recherchePopulationVille = new RecherchePopulationVille();
+                RecherchePopulationVille.traiter(recensement, scanner);
+            }
+            case 2 -> {
+                RecherchePopulationDepartement recherchePopulationDepartement = new RecherchePopulationDepartement();
+                recherchePopulationDepartement.traiter(recensement, scanner);
+            }
+            case 3 -> {
+                RecherchePopulationRegion recherchePopulationRegion = new RecherchePopulationRegion();
+                recherchePopulationRegion.traiter(recensement, scanner);
+            }
+            case 4 -> {
+                RechercheTopRegion rechercheTopRegion = new RechercheTopRegion();
+                rechercheTopRegion.traiter(recensement, scanner);
+            }
+            case 5 -> {
+                RechercheTopDepartement rechercheTopDepartement = new RechercheTopDepartement();
+                rechercheTopDepartement.traiter(recensement, scanner);
+            }
+            case 6 -> {
+                RechercheTopVilleDepartement rechercheTopVilleDepartement = new RechercheTopVilleDepartement();
+                rechercheTopVilleDepartement.traiter(recensement, scanner);
+            }
+            case 7 -> {
+                RechercheTopVilleRegion rechercheTopVilleRegion = new RechercheTopVilleRegion();
+                rechercheTopVilleRegion.traiter(recensement, scanner);
+            }
+            case 8 -> {
+                RechercheTopVilleFrance rechercheTopVilleFrance = new RechercheTopVilleFrance();
+                rechercheTopVilleFrance.traiter(recensement, scanner);
+            }
+            case 9 -> System.exit(0);
+        }
     }
 }

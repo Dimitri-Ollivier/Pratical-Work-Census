@@ -32,7 +32,7 @@ public class Application {
                 String codeDepartement = morceaux[2];
                 String codeCommune = morceaux[5];
                 String nomCommune = morceaux[6];
-                String population = morceaux[7];
+                String population = morceaux[9];
 
                 int populationTotale = Integer.parseInt(population.replace(" ", "").trim());
 
