@@ -1,7 +1,10 @@
 package fr.epsi.b3.recensement;
 
-public class MenuService {
-    public abstract void traiter(Recensement recensement, Scanner scanner) {
+import java.util.Scanner;
+
+public abstract class MenuService {
+
+    public static void traiter(Recensement recensement, Scanner scanner) {
         System.out.println("1 : Population d’une ville donnée");
         System.out.println("2 : Population d’un département donné");
         System.out.println("3 : Population d’une région donnée");
@@ -11,8 +14,8 @@ public class MenuService {
         System.out.println("7 : Afficher les 10 villes les plus peuplées d’une région");
         System.out.println("8 : Afficher les 10 villes les plus peuplées de France");
         System.out.println("9 : Sortir");
-        System.out.println("Veulliez saisir votre choix : ");
-        int nb = sc.nextInt();
+        System.out.println("Veulliez choisir une action à exécuter : ");
+        int nb = scanner.nextInt();
 
 
     }
