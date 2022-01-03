@@ -11,7 +11,7 @@ public class RecherchePopulationDepartement extends MenuService {
         System.out.println("Veulliez saisir le numéro du département de votre choix :");
 
         String scan = scanner.next();
-        boolean validCity = false;
+        boolean validDepartement = false;
         int nombreHabitants = 0;
 
         for (int i = 0; i <= recensement.GetListSize() - 1; i++) {
@@ -19,11 +19,11 @@ public class RecherchePopulationDepartement extends MenuService {
 
             if (ville.getCodeDepartement().equals(scan)) {
                 nombreHabitants += ville.getPopulation();
-                validCity = true;
+                validDepartement = true;
             }
         }
 
-        if (!validCity) {
+        if (!validDepartement) {
             System.out.println("La département saisie n'existe pas :(");
         } else {
             System.out.println("Il y a "+ nombreHabitants + " dans le département numéro " + scan + ".");
