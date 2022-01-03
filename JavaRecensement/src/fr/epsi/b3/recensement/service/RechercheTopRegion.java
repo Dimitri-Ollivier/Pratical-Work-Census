@@ -9,7 +9,11 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class RechercheTopRegion extends MenuService {
-    public static void traiter(Recensement recensement, Scanner scanner) {
+    public RechercheTopRegion(Recensement recensement, Scanner scanner) {
+        super(recensement, scanner);
+    }
+    @Override
+    public void traiter(Recensement recensement, Scanner scanner) {
         System.out.println("Voici les 10 premières régions les peuplées de France :");
 
         ArrayList<String> regionsValues = new ArrayList<>();

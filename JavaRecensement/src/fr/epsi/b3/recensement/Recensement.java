@@ -9,10 +9,6 @@ public class Recensement {
         this.listeVilles.add(city);
     }
 
-    public ArrayList<Ville> GetCityList () {
-        return listeVilles;
-    }
-
     public int GetListSize() {
         return listeVilles.size();
     }

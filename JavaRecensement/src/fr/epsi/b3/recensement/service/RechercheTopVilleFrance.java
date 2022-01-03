@@ -8,7 +8,12 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class RechercheTopVilleFrance extends MenuService {
-    public static void traiter(Recensement recensement, Scanner scanner) {
+    public RechercheTopVilleFrance(Recensement recensement, Scanner scanner) {
+        super(recensement, scanner);
+    }
+
+    @Override
+    public void traiter(Recensement recensement, Scanner scanner) {
         System.out.println("Voici les 10 premières villes les peuplées de France :");
 
         Ville[] classement = new  Ville[10];

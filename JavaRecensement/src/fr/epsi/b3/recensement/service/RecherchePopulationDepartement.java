@@ -7,7 +7,11 @@ import fr.epsi.b3.recensement.Ville;
 import java.util.Scanner;
 
 public class RecherchePopulationDepartement extends MenuService {
-    public static void traiter(Recensement recensement, Scanner scanner) {
+    public RecherchePopulationDepartement(Recensement recensement, Scanner scanner) {
+        super(recensement, scanner);
+    }
+    @Override
+    public void traiter(Recensement recensement, Scanner scanner) {
         System.out.println("Veulliez saisir le numéro du département de votre choix :");
 
         String scan = scanner.next();

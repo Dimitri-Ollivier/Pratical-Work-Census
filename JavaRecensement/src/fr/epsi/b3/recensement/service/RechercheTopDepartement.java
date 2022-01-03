@@ -9,7 +9,11 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class RechercheTopDepartement extends MenuService {
-    public static void traiter(Recensement recensement, Scanner scanner) {
+    public RechercheTopDepartement(Recensement recensement, Scanner scanner) {
+        super(recensement, scanner);
+    }
+    @Override
+    public void traiter(Recensement recensement, Scanner scanner) {
         System.out.println("Voici les 10 premiers départements les peuplés de France :");
 
         ArrayList<String> departementsValues = new ArrayList<>();

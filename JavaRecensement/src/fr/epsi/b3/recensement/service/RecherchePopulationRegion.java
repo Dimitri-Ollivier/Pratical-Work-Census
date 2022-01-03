@@ -7,7 +7,11 @@ import fr.epsi.b3.recensement.Ville;
 import java.util.Scanner;
 
 public class RecherchePopulationRegion  extends MenuService {
-    public static void traiter(Recensement recensement, Scanner scanner) {
+    public RecherchePopulationRegion(Recensement recensement, Scanner scanner) {
+        super(recensement, scanner);
+    }
+    @Override
+    public void traiter(Recensement recensement, Scanner scanner) {
         System.out.println("Veulliez saisir le nom ou le numéro de la région de votre choix :");
 
         String scan = scanner.next();

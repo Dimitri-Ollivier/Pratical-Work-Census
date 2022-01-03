@@ -8,7 +8,12 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class RechercheTopVilleRegion extends MenuService {
-    public static void traiter(Recensement recensement, Scanner scanner) {
+    public RechercheTopVilleRegion(Recensement recensement, Scanner scanner) {
+        super(recensement, scanner);
+    }
+
+    @Override
+    public void traiter(Recensement recensement, Scanner scanner) {
         System.out.println("Veulliez saisir le nom ou le numéro de la région de votre choix :");
 
         String scan = scanner.next();
@@ -40,12 +45,12 @@ public class RechercheTopVilleRegion extends MenuService {
         if (!validCity) {
             System.out.println("La région saisie n'existe pas :(");
         } else {
-            System.out.println("Voici les 10 premières villes les peuplées de la région saisie :");
+            System.out.println("Voici les 10 premières villes les peuplées de la région " + classement[1].getNomRegion() + " :");
         }
 
         for (int i = 0; i <= classement.length - 1; i++) {
             if (classement[i] != null) {
-                System.out.println("    - " + classement[i].getNomCommune() + " dans la région " + classement[i].getNomRegion() + " avec " + classement[i].getPopulation() + " habitants.");
+                System.out.println("    - " + classement[i].getNomCommune() + " dans le département numéro " + classement[i].getCodeDepartement() + " avec " + classement[i].getPopulation() + " habitants.");
             }
         }
     }
