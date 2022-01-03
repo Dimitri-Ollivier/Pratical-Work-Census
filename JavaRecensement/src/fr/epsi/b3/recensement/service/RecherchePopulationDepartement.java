@@ -24,7 +24,7 @@ public class RecherchePopulationDepartement extends MenuService {
         }
 
         if (!validDepartement) {
-            System.out.println("La département saisie n'existe pas :(");
+            System.out.println("Le département saisie n'existe pas :(");
         } else {
             System.out.println("Il y a "+ nombreHabitants + " dans le département numéro " + scan + ".");
         }

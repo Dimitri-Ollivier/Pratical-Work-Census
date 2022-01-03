@@ -61,7 +61,7 @@ public class RechercheTopRegion extends MenuService {
         }
 
         for (int i = 0; i <= classement.length - 1; i++) {
-            System.out.println("La région " + classement[i].getNomRegion() + " avec " + classement[i].getPopulationRegion() + " habitants.");
+            System.out.println("    - La région " + classement[i].getNomRegion() + " avec " + classement[i].getPopulationRegion() + " habitants.");
         }
     }
 }

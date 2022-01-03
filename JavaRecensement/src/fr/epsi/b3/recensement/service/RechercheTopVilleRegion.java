@@ -39,12 +39,14 @@ public class RechercheTopVilleRegion extends MenuService {
 
         if (!validCity) {
             System.out.println("La région saisie n'existe pas :(");
+        } else {
+            System.out.println("Voici les 10 premières villes les peuplées de la région saisie :");
         }
 
-        System.out.println("Voici les 10 premières villes les peuplées de France :");
-
         for (int i = 0; i <= classement.length - 1; i++) {
-            System.out.println("    - " + classement[i].getNomCommune() + " dans la région " + classement[i].getNomRegion() + " avec " + classement[i].getPopulation() + " habitants.");
+            if (classement[i] != null) {
+                System.out.println("    - " + classement[i].getNomCommune() + " dans la région " + classement[i].getNomRegion() + " avec " + classement[i].getPopulation() + " habitants.");
+            }
         }
     }
 }

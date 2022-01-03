@@ -19,39 +19,43 @@ public abstract class MenuService {
         int nb = scanner.nextInt();
 
         switch (nb) {
-            case 1 -> {
+            case 1:
                 RecherchePopulationVille recherchePopulationVille = new RecherchePopulationVille();
-                RecherchePopulationVille.traiter(recensement, scanner);
-            }
-            case 2 -> {
+                recherchePopulationVille.traiter(recensement, scanner);
+                break;
+            case 2:
                 RecherchePopulationDepartement recherchePopulationDepartement = new RecherchePopulationDepartement();
                 recherchePopulationDepartement.traiter(recensement, scanner);
-            }
-            case 3 -> {
+                break;
+            case 3:
                 RecherchePopulationRegion recherchePopulationRegion = new RecherchePopulationRegion();
                 recherchePopulationRegion.traiter(recensement, scanner);
-            }
-            case 4 -> {
+                break;
+            case 4:
                 RechercheTopRegion rechercheTopRegion = new RechercheTopRegion();
                 rechercheTopRegion.traiter(recensement, scanner);
-            }
-            case 5 -> {
+                break;
+            case 5:
                 RechercheTopDepartement rechercheTopDepartement = new RechercheTopDepartement();
                 rechercheTopDepartement.traiter(recensement, scanner);
-            }
-            case 6 -> {
+                break;
+            case 6:
                 RechercheTopVilleDepartement rechercheTopVilleDepartement = new RechercheTopVilleDepartement();
                 rechercheTopVilleDepartement.traiter(recensement, scanner);
-            }
-            case 7 -> {
+                break;
+            case 7:
                 RechercheTopVilleRegion rechercheTopVilleRegion = new RechercheTopVilleRegion();
                 rechercheTopVilleRegion.traiter(recensement, scanner);
-            }
-            case 8 -> {
+                break;
+            case 8:
                 RechercheTopVilleFrance rechercheTopVilleFrance = new RechercheTopVilleFrance();
                 rechercheTopVilleFrance.traiter(recensement, scanner);
-            }
-            case 9 -> System.exit(0);
+                break;
+            case 9:
+                System.exit(0);
+                break;
+            default:
+                System.out.println("le choix saisi n'est pas valide");
         }
     }
 }

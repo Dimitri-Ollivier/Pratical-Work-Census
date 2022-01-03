@@ -39,12 +39,14 @@ public class RechercheTopVilleDepartement extends MenuService {
 
         if (!validCity) {
             System.out.println("Le numéro de département saisie n'existe pas :(");
+        } else {
+            System.out.println("Voici les 10 premières villes les peuplées du département saisi :");
         }
 
-        System.out.println("Voici les 10 premières villes les peuplées de France :");
-
         for (int i = 0; i <= classement.length - 1; i++) {
-            System.out.println("    - " + classement[i].getNomCommune() + " dans le département numéro " + classement[i].getCodeDepartement() + " avec " + classement[i].getPopulation() + " habitants.");
+            if (classement[i] != null) {
+                System.out.println("    - " + classement[i].getNomCommune() + " dans le département numéro " + classement[i].getCodeDepartement() + " avec " + classement[i].getPopulation() + " habitants.");
+            }
         }
     }
 }

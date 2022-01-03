@@ -61,7 +61,7 @@ public class RechercheTopDepartement extends MenuService {
         }
 
         for (int i = 0; i <= classement.length - 1; i++) {
-            System.out.println("Le département numéro " + classement[i].getCodeDepartement()+ " avec " + classement[i].getPopulationDepartement() + " habitants.");
+            System.out.println("    - Le département numéro " + classement[i].getCodeDepartement()+ " avec " + classement[i].getPopulationDepartement() + " habitants.");
         }
     }
 }
