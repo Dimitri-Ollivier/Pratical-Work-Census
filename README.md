@@ -1,7 +1,7 @@
-# Tp-Recensement
-Ce dépôt contient le code java pour le tp recensement.
+# Pratical-Work-Census
+This repository contains the java code for the census pratical work.
 
-Il comprend le package fr.epsi.b3.recensement ainsi que le fichier csv contenant les données liées à ce tp.
+It includes the fr.epsi.b3.recensement package as well as the csv file containing the data linked to this class.
 
-L'exécutable de cette application est la classe Application. Ce package contient 4 objets Ville, Recensement, Région et Département.
-La classe abstraite MenuService permet de gérer le menu de l'application. MenuService possède 8 sous classe dans le package Service.
+The executable of this application is the Application class. This package contains 4 objects Ville, Recensement, Région et Département.
+The MenuService abstract class is used to manage the application menu. MenuService has 8 subclasses in the Service package.
